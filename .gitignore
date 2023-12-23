@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Arquivos de log
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente
+.env
+
+# SQLite
+/data/*.db
+
+# Docker
+#.docker/
+#.docker-compose.yml

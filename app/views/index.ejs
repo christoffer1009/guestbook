@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Livro de Visitas</h1>
+
+    <form action="/sign" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Assinar</button>
+    </form>
+
+    <h2>Visitas:</h2>
+    <ul>
+        <% entries.forEach(entry => { %>
+            <li><strong><%= entry.name %>:</strong> <%= entry.message %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
